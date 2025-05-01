@@ -30,19 +30,19 @@ public class gestionDispositivoController {
     private ComboBox<?> compuestoSimpleComboBox;
 
     @FXML
+    private TextField dispositivoNombreCampo;
+
+    @FXML
     private Button eliminarDispositivoBoton;
 
     @FXML
     private ComboBox<?> hijoComboBox;
 
     @FXML
-    private TextField productoNombreCampo;
+    private Button recargarCompuestoBoton;
 
     @FXML
-    private Button recargarBoton;
-
-    @FXML
-    private Button recargarBoton1;
+    private Button recargarSimpleBoton;
 
     @FXML
     private TableView<?> tablaCompuesto;
@@ -66,7 +66,12 @@ public class gestionDispositivoController {
     }
 
     @FXML
-    void recargarAccion(ActionEvent event) {
+    void recargarCompuestoAccion(ActionEvent event) {
+
+    }
+
+    @FXML
+    void recargarSimpleAccion(ActionEvent event) {
 
     }
 
@@ -76,14 +81,15 @@ public class gestionDispositivoController {
         assert atrasBoton != null : "fx:id=\"atrasBoton\" was not injected: check your FXML file 'gestionDispositivo.fxml'.";
         assert añadirDispositivoBoton != null : "fx:id=\"añadirDispositivoBoton\" was not injected: check your FXML file 'gestionDispositivo.fxml'.";
         assert compuestoSimpleComboBox != null : "fx:id=\"compuestoSimpleComboBox\" was not injected: check your FXML file 'gestionDispositivo.fxml'.";
+        assert dispositivoNombreCampo != null : "fx:id=\"dispositivoNombreCampo\" was not injected: check your FXML file 'gestionDispositivo.fxml'.";
         assert eliminarDispositivoBoton != null : "fx:id=\"eliminarDispositivoBoton\" was not injected: check your FXML file 'gestionDispositivo.fxml'.";
         assert hijoComboBox != null : "fx:id=\"hijoComboBox\" was not injected: check your FXML file 'gestionDispositivo.fxml'.";
-        assert productoNombreCampo != null : "fx:id=\"productoNombreCampo\" was not injected: check your FXML file 'gestionDispositivo.fxml'.";
-        assert recargarBoton != null : "fx:id=\"recargarBoton\" was not injected: check your FXML file 'gestionDispositivo.fxml'.";
-        assert recargarBoton1 != null : "fx:id=\"recargarBoton1\" was not injected: check your FXML file 'gestionDispositivo.fxml'.";
+        assert recargarCompuestoBoton != null : "fx:id=\"recargarCompuestoBoton\" was not injected: check your FXML file 'gestionDispositivo.fxml'.";
+        assert recargarSimpleBoton != null : "fx:id=\"recargarSimpleBoton\" was not injected: check your FXML file 'gestionDispositivo.fxml'.";
         assert tablaCompuesto != null : "fx:id=\"tablaCompuesto\" was not injected: check your FXML file 'gestionDispositivo.fxml'.";
         assert tablaSimple != null : "fx:id=\"tablaSimple\" was not injected: check your FXML file 'gestionDispositivo.fxml'.";
 
     }
 
 }
+

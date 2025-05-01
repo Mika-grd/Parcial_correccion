@@ -10,7 +10,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane prefHeight="606.0" prefWidth="909.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.correccion_parcial_2_pii.controller.gestionDispositivoController">
    <children>
       <VBox layoutX="34.0" layoutY="33.0" prefHeight="429.0" prefWidth="287.0" spacing="25.0">
@@ -20,7 +19,7 @@
                   <Font name="Algerian" size="28.0" />
                </font>
             </Text>
-            <TextField fx:id="productoNombreCampo" prefHeight="30.0" prefWidth="287.0" promptText="Nombre" />
+            <TextField fx:id="dispositivoNombreCampo" prefHeight="30.0" prefWidth="287.0" promptText="Nombre" />
             <ComboBox fx:id="compuestoSimpleComboBox" prefHeight="26.0" prefWidth="290.0" promptText="Compuesto o Simple" />
             <ComboBox fx:id="activoComboBox" prefHeight="26.0" prefWidth="291.0" promptText="Activo" />
             <ComboBox fx:id="hijoComboBox" prefHeight="26.0" prefWidth="290.0" promptText="hijo" />
@@ -41,7 +40,7 @@
           <TableColumn prefWidth="200.79998779296875" text="activo" />
         </columns>
       </TableView>
-      <Button fx:id="recargarBoton" layoutX="486.0" layoutY="33.0" mnemonicParsing="false" onAction="#recargarAccion" prefHeight="30.0" prefWidth="68.0" text="Recargar" />
-      <Button fx:id="recargarBoton1" layoutX="486.0" layoutY="552.0" mnemonicParsing="false" onAction="#recargarAccion" prefHeight="30.0" prefWidth="68.0" text="Recargar" />
+      <Button fx:id="recargarCompuestoBoton" layoutX="486.0" layoutY="33.0" mnemonicParsing="false" onAction="#recargarCompuestoAccion" prefHeight="30.0" prefWidth="68.0" text="Recargar" />
+      <Button fx:id="recargarSimpleBoton" layoutX="486.0" layoutY="552.0" mnemonicParsing="false" onAction="#recargarSimpleAccion" prefHeight="30.0" prefWidth="68.0" text="Recargar" />
    </children>
 </AnchorPane>
