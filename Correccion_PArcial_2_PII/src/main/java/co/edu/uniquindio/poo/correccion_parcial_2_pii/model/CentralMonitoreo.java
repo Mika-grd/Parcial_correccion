@@ -79,4 +79,47 @@ public class CentralMonitoreo {
             }
         }
     }
+
+    //añadir Dispositivo
+    public String añadirDispositivo(Dispositivo dispositivo) throws IllegalArgumentException {
+        String mensaje = "Se añadió correctamente";
+        if (dispositivo == null) {
+            throw new IllegalArgumentException("No se aceptan objetos nulos");
+        }
+        dispositivos.add(dispositivo);
+        return mensaje;
+    }
+
+    //eliminar dispositivo
+    public String eliminarDispositivo(Dispositivo dispositivo) throws IllegalArgumentException {
+        String mensaje = "Se eliminó correctamente";
+        if (dispositivo == null) {
+            throw new IllegalArgumentException("No se aceptan objetos nulos");
+        }
+        if (!dispositivos.contains(dispositivo)) {
+            mensaje = "No se encuentra en la lista";
+        }
+        dispositivos.remove(dispositivo);
+        return mensaje;
+    }
+
+
+    //editar dispositivo
+    public String editarDispositivo(Dispositivo dispositivo, Dispositivo nuevoDispositivo) throws IllegalArgumentException {
+        String mensaje = "Editado correctamente";
+
+        if (dispositivo == null || nuevoDispositivo == null) {
+            throw new IllegalArgumentException("No se aceptan objetos nulos");
+        }
+
+        if (!dispositivos.contains(dispositivo)) {
+            mensaje = "No se encuentra en la lista";
+        }
+
+        dispositivos.remove(dispositivo);
+        dispositivos.add(nuevoDispositivo);
+        return mensaje;
+    }
+
+
 }

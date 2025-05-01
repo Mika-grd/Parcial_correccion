@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="606.0" prefWidth="909.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.correccion_parcial_2_pii.controller.gestionDispositivoController">
+   <children>
+      <VBox layoutX="34.0" layoutY="33.0" prefHeight="429.0" prefWidth="287.0" spacing="25.0">
+         <children>
+            <Text fill="WHITE" text="Añadir Dispositivos" wrappingWidth="290.68597412109375">
+               <font>
+                  <Font name="Algerian" size="28.0" />
+               </font>
+            </Text>
+            <TextField fx:id="productoNombreCampo" prefHeight="30.0" prefWidth="287.0" promptText="Nombre" />
+            <ComboBox fx:id="compuestoSimpleComboBox" prefHeight="26.0" prefWidth="290.0" promptText="Compuesto o Simple" />
+            <ComboBox fx:id="activoComboBox" prefHeight="26.0" prefWidth="291.0" promptText="Activo" />
+            <ComboBox fx:id="hijoComboBox" prefHeight="26.0" prefWidth="290.0" promptText="hijo" />
+            <Button fx:id="añadirDispositivoBoton" onAction="#añadirDispositivoAccion" prefHeight="37.0" prefWidth="235.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 16px;" text="Añadir Dispositivo" />
+            <Button fx:id="eliminarDispositivoBoton" onAction="#eliminarDispositivoAccion" prefHeight="37.0" prefWidth="235.0" style="-fx-background-color: red; -fx-text-fill: white; -fx-font-size: 16px;" text="Eliminar Dispositivo" />
+            <Button fx:id="atrasBoton" mnemonicParsing="false" onAction="#atrasAccion" prefHeight="28.0" prefWidth="57.0" text="Atras" textFill="RED" />
+         </children>
+      </VBox>
+      <TableView fx:id="tablaCompuesto" layoutX="486.0" layoutY="81.0" prefHeight="200.0" prefWidth="406.0">
+        <columns>
+          <TableColumn prefWidth="200.00003051757812" text="nombre" />
+          <TableColumn prefWidth="204.7999267578125" text="hijos" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tablaSimple" layoutX="486.0" layoutY="338.0" prefHeight="200.0" prefWidth="406.0">
+        <columns>
+          <TableColumn prefWidth="204.80001831054688" text="nombre" />
+          <TableColumn prefWidth="200.79998779296875" text="activo" />
+        </columns>
+      </TableView>
+      <Button fx:id="recargarBoton" layoutX="486.0" layoutY="33.0" mnemonicParsing="false" onAction="#recargarAccion" prefHeight="30.0" prefWidth="68.0" text="Recargar" />
+      <Button fx:id="recargarBoton1" layoutX="486.0" layoutY="552.0" mnemonicParsing="false" onAction="#recargarAccion" prefHeight="30.0" prefWidth="68.0" text="Recargar" />
+   </children>
+</AnchorPane>

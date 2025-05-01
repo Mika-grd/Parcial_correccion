@@ -17,8 +17,45 @@ public class RegistroGlobal {
         return instancia;
     }
 
-    public void agregarProducto(Producto producto) {
+    //añadir Producto
+    public String añadirProducto(Producto producto) throws IllegalArgumentException {
+        String mensaje = "Se añadió correctamente";
+        if (producto == null) {
+            throw new IllegalArgumentException("No se aceptan objetos nulos");
+        }
         productos.add(producto);
+        return mensaje;
+    }
+
+    //eliminar producto
+    public String eliminarPersona(Producto producto) throws IllegalArgumentException {
+        String mensaje = "Se eliminó correctamente";
+        if (producto == null) {
+            throw new IllegalArgumentException("No se aceptan objetos nulos");
+        }
+        if (!productos.contains(producto)) {
+            mensaje = "No se encuentra en la lista";
+        }
+        productos.remove(producto);
+        return mensaje;
+    }
+
+
+    //editar producto
+    public String editarProducto(Producto producto, Producto nuevoProducto) throws IllegalArgumentException {
+        String mensaje = "Editado correctamente";
+
+        if (producto == null || nuevoProducto == null) {
+            throw new IllegalArgumentException("No se aceptan objetos nulos");
+        }
+
+        if (!productos.contains(producto)) {
+            mensaje = "No se encuentra en la lista";
+        }
+
+        productos.remove(producto);
+        productos.add(nuevoProducto);
+        return mensaje;
     }
 
     public List<Producto> getProductos() {
