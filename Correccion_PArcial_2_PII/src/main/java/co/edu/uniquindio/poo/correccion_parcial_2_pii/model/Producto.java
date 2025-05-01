@@ -44,6 +44,10 @@ public class Producto {
         return nombre + " - $" + precio + " - Componentes: " + componentes;
     }
 
+    public void addComponente(String componente) {
+        componentes.add(componente.toLowerCase());
+    }
+
     /**
      * Builder para la creación flexible de productos.
      */

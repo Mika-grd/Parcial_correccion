@@ -44,5 +44,22 @@ public class DispositivoCompuesto implements Dispositivo {
     public String tipo() {
         return nombre;
     }
-    
+
+    public List<Dispositivo> getHijos() {
+        return hijos;
+    }
+
+    public void setHijos(List<Dispositivo> hijos) {
+        this.hijos = hijos;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+
 }

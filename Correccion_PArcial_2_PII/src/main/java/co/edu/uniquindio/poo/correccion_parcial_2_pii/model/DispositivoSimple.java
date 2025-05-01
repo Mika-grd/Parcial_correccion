@@ -28,5 +28,37 @@ public class DispositivoSimple implements Dispositivo {
     public String tipo() {
         return nombre;
     }
-    
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public boolean isActivo() {
+        return activo;
+    }
+
+    public void setActivo(boolean activo) {
+        this.activo = activo;
+    }
+
+    public int getPrioridad() {
+        return prioridad;
+    }
+
+    public void setPrioridad(int prioridad) {
+        this.prioridad = prioridad;
+    }
+
+    @Override
+    public String toString() {
+        return "DispositivoSimple{" +
+                "nombre='" + nombre + '\'' +
+                ", activo=" + activo +
+                ", prioridad=" + prioridad +
+                '}';
+    }
 }

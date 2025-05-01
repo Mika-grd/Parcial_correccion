@@ -1,5 +1,6 @@
 package co.edu.uniquindio.poo.correccion_parcial_2_pii.model;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -7,9 +8,19 @@ import java.util.List;
  */
 public class CentralMonitoreo {
 
-    private List<Dispositivo> dispositivos;
+    private LinkedList<Dispositivo> dispositivos;
 
-    public CentralMonitoreo(List<Dispositivo> dispositivos) {
+    private static CentralMonitoreo instancia;
+
+    public static CentralMonitoreo getInstancia() {
+        if (instancia == null)
+            instancia = new CentralMonitoreo(new LinkedList<>());
+        return instancia;
+    }
+
+
+
+    private CentralMonitoreo(LinkedList<Dispositivo> dispositivos) {
         this.dispositivos = dispositivos;
     }
 
@@ -121,5 +132,11 @@ public class CentralMonitoreo {
         return mensaje;
     }
 
+    public LinkedList<Dispositivo> getDispositivos() {
+        return dispositivos;
+    }
 
+    public void setDispositivos(LinkedList<Dispositivo> dispositivos) {
+        this.dispositivos = dispositivos;
+    }
 }

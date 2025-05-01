@@ -17,6 +17,10 @@ public class RegistroGlobal {
         return instancia;
     }
 
+    public void agregarProducto(Producto producto) {
+        productos.add(producto);
+    }
+
     //añadir Producto
     public String añadirProducto(Producto producto) throws IllegalArgumentException {
         String mensaje = "Se añadió correctamente";

@@ -20,9 +20,9 @@
                </font>
             </Text>
             <TextField fx:id="dispositivoNombreCampo" prefHeight="30.0" prefWidth="287.0" promptText="Nombre" />
-            <ComboBox fx:id="compuestoSimpleComboBox" prefHeight="26.0" prefWidth="290.0" promptText="Compuesto o Simple" />
-            <ComboBox fx:id="activoComboBox" prefHeight="26.0" prefWidth="291.0" promptText="Activo" />
-            <ComboBox fx:id="hijoComboBox" prefHeight="26.0" prefWidth="290.0" promptText="hijo" />
+            <ComboBox fx:id="compuestoSimpleComboBox" prefHeight="26.0" prefWidth="290.0" promptText="¿Es compuesto?" />
+            <ComboBox fx:id="activoComboBox" prefHeight="26.0" prefWidth="291.0" promptText="¿Está activo?" />
+            <ComboBox fx:id="hijoComboBox" prefHeight="26.0" prefWidth="290.0" promptText="Hijo de: " />
             <Button fx:id="añadirDispositivoBoton" onAction="#añadirDispositivoAccion" prefHeight="37.0" prefWidth="235.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 16px;" text="Añadir Dispositivo" />
             <Button fx:id="eliminarDispositivoBoton" onAction="#eliminarDispositivoAccion" prefHeight="37.0" prefWidth="235.0" style="-fx-background-color: red; -fx-text-fill: white; -fx-font-size: 16px;" text="Eliminar Dispositivo" />
             <Button fx:id="atrasBoton" mnemonicParsing="false" onAction="#atrasAccion" prefHeight="28.0" prefWidth="57.0" text="Atras" textFill="RED" />
@@ -30,14 +30,14 @@
       </VBox>
       <TableView fx:id="tablaCompuesto" layoutX="486.0" layoutY="81.0" prefHeight="200.0" prefWidth="406.0">
         <columns>
-          <TableColumn prefWidth="200.00003051757812" text="nombre" />
-          <TableColumn prefWidth="204.7999267578125" text="hijos" />
+          <TableColumn fx:id="nombreCompuestoColumn" prefWidth="200.00003051757812" text="nombreCompuesto" />
+          <TableColumn fx:id="hijosColumn" prefWidth="204.7999267578125" text="hijos" />
         </columns>
       </TableView>
       <TableView fx:id="tablaSimple" layoutX="486.0" layoutY="338.0" prefHeight="200.0" prefWidth="406.0">
         <columns>
-          <TableColumn prefWidth="204.80001831054688" text="nombre" />
-          <TableColumn prefWidth="200.79998779296875" text="activo" />
+          <TableColumn fx:id="nombreSimpleColumn" prefWidth="204.80001831054688" text="nombreSimple" />
+          <TableColumn fx:id="activoColumn" prefWidth="200.79998779296875" text="activo" />
         </columns>
       </TableView>
       <Button fx:id="recargarCompuestoBoton" layoutX="486.0" layoutY="33.0" mnemonicParsing="false" onAction="#recargarCompuestoAccion" prefHeight="30.0" prefWidth="68.0" text="Recargar" />

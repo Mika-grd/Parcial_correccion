@@ -23,5 +23,6 @@ public class Firewall extends ModuloDecorator {
     public String tipo() {
         return decorado.tipo();
     }
-    
+
+
 }

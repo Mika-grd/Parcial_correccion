@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
-
 
 <AnchorPane prefHeight="578.0" prefWidth="832.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.correccion_parcial_2_pii.controller.gestionProductoController">
    <children>
@@ -36,20 +32,6 @@
             <TableColumn fx:id="componenteColumna" prefWidth="151.199951171875" text="Componente" />
         </columns>
       </TableView>
-      <HBox layoutX="406.0" layoutY="24.0" prefHeight="46.0" prefWidth="400.0" spacing="10.0" style="-fx-background-color: rgba(208, 208, 208, 0.9);">
-         <children>
-            <TextField fx:id="busquedaCampo" prefHeight="26.0" prefWidth="230.0" />
-            <Button fx:id="buscarBoton" onAction="#buscarAccion" prefHeight="31.0" prefWidth="67.0" text="Buscar" />
-            <Pane prefHeight="36.0" prefWidth="126.0">
-               <children>
-                  <Button fx:id="recargarBoton" layoutY="-1.0" mnemonicParsing="false" onAction="#recargarAccion" prefHeight="30.0" prefWidth="68.0" text="Recargar" />
-               </children>
-            </Pane>
-         </children>
-         <padding>
-            <Insets top="10.0" />
-         </padding>
-      </HBox>
       <TextField fx:id="productoComponenteCampo" layoutX="35.0" layoutY="479.0" prefHeight="30.0" prefWidth="287.0" promptText="Componente" />
       <Button fx:id="añadirComponenteBoton" layoutX="35.0" layoutY="520.0" onAction="#añadirComponenteAccion" prefHeight="37.0" prefWidth="178.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 16px;" text="Añadir Componente" />
    </children>

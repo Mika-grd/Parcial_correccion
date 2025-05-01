@@ -2,12 +2,14 @@ package co.edu.uniquindio.poo.correccion_parcial_2_pii;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 
 import co.edu.uniquindio.poo.correccion_parcial_2_pii.model.*;
@@ -15,9 +17,11 @@ import co.edu.uniquindio.poo.correccion_parcial_2_pii.model.*;
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Hello!");
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/co/edu/uniquindio/poo/correccion_parcial_2_pii/Principal.fxml"));
+        Parent root = fxmlLoader.load();
+
+        Scene scene = new Scene(root);
+        stage.setTitle("Mi Aplicación JavaFX");
         stage.setScene(scene);
         stage.show();
     }
@@ -71,8 +75,12 @@ public class HelloApplication extends Application {
             central.agregar(firewallSensor);
             central.agregar(intrusosCamara);
 
-            List<Dispositivo> lista = new ArrayList<>(Arrays.asList(central, camara, sensor, firewallSensor));
-            CentralMonitoreo cm = new CentralMonitoreo(lista);
+            LinkedList<Dispositivo> lista = new LinkedList<>(Arrays.asList(central, camara, sensor, firewallSensor));
+
+            CentralMonitoreo cm = CentralMonitoreo.getInstancia();
+            for (Dispositivo d : lista) {
+                cm.añadirDispositivo(d);
+            }
 
             // Mostrar estados
             cm.mostrarEstados();
