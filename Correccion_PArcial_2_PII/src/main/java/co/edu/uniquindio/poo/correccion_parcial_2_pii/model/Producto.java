@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * Clase Producto modela un producto personalizable usando el patrón Builder.
  */
-public class Producto {
+public class Producto implements Prototype, Cloneable {
     private String nombre;
     private List<String> componentes;
     private double precio;
@@ -46,6 +46,27 @@ public class Producto {
 
     public void addComponente(String componente) {
         componentes.add(componente.toLowerCase());
+    }
+
+    @Override
+    public Producto clone() {
+        try {
+            return (Producto) super.clone();
+        } catch (CloneNotSupportedException e) {
+            throw new AssertionError();
+        }
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setComponentes(List<String> componentes) {
+        this.componentes = componentes;
+    }
+
+    public void setPrecio(double precio) {
+        this.precio = precio;
     }
 
     /**

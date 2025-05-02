@@ -35,11 +35,14 @@ public class HelloApplication extends Application {
             Producto p1 = new Producto.Builder().setNombre("Jugo Verde").addComponente("Limón").addComponente("Espinaca").setPrecio(12).build();
             Producto p2 = new Producto.Builder().setNombre("Jugo Rojo").addComponente("Fresa").addComponente("Remolacha").setPrecio(15).build();
             Producto p3 = new Producto.Builder().setNombre("Ensalada Mix").addComponente("Tomate").addComponente("Queso").setPrecio(10).build();
+            Producto p4 = p3.clone();
+            p4.setNombre("Clon Ensalada Mix");
 
             RegistroGlobal rg = RegistroGlobal.getInstancia();
             rg.agregarProducto(p1);
             rg.agregarProducto(p2);
             rg.agregarProducto(p3);
+            rg.agregarProducto(p4);
 
             rg.mostrar();
 
